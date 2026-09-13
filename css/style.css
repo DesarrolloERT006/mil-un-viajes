@@ -353,9 +353,134 @@ select:focus-visible, textarea:focus-visible {
 .contact-map { flex: 1; min-width: 300px; min-height: 400px; }
 
 /* =========================================================
+   CONTACTO — DISEÑO EN 3 COLUMNAS (INFO / FORMULARIO / MAPA)
+   ========================================================= */
+.contact-layout {
+    display: grid;
+    grid-template-columns: 300px 1fr 340px;
+    gap: 28px;
+    align-items: start;
+}
+
+.info-panel { display: flex; flex-direction: column; gap: 16px; }
+
+.info-card {
+    display: flex;
+    gap: 14px;
+    background: var(--white);
+    border: 1px solid var(--gray-300);
+    border-radius: var(--radius-md);
+    padding: 20px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+a.info-card-link { text-decoration: none; }
+.info-card-link:hover { border-color: var(--primary-color); box-shadow: var(--shadow-md); transform: translateY(-3px); }
+
+.info-icon {
+    width: 44px; height: 44px; flex-shrink: 0;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: var(--white);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.05rem;
+}
+
+.info-body h4 { font-size: 0.92rem; color: var(--dark-color); font-weight: 700; margin-bottom: 6px; }
+.info-value { font-weight: 700; color: var(--dark-color); font-size: 1rem; margin-bottom: 2px; }
+.info-desc { color: var(--gray-500); font-size: 0.86rem; line-height: 1.5; }
+.info-extra { color: var(--primary-color); font-weight: 700; font-size: 0.85rem; margin-top: 8px; }
+.info-link {
+    display: inline-flex; align-items: center; gap: 6px; margin-top: 10px;
+    color: var(--primary-color); font-weight: 700; font-size: 0.88rem; transition: var(--transition);
+}
+.info-link:hover { gap: 10px; color: var(--primary-dark); }
+
+.contact-form-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    padding: 40px;
+}
+.form-icon {
+    width: 52px; height: 52px; border-radius: 14px;
+    background: var(--accent-light); color: var(--accent-color);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.3rem; margin-bottom: 18px;
+}
+.contact-form-card h2 { color: var(--dark-color); font-size: 1.5rem; margin-bottom: 8px; }
+.form-subtitle { color: var(--gray-500); font-size: 0.92rem; margin-bottom: 28px; }
+
+.contact-form-card .input-wrapper { margin-bottom: 18px; }
+.contact-form-card select { cursor: pointer; }
+.contact-form-card textarea { resize: vertical; min-height: 90px; }
+.input-wrapper-textarea { align-items: flex-start; padding-top: 14px; }
+.input-wrapper-textarea i { margin-top: 3px; }
+
+.form-note {
+    margin-top: 18px; text-align: center; font-size: 0.85rem; color: var(--gray-500);
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+}
+.form-note i { color: var(--primary-color); }
+
+.map-panel { display: flex; flex-direction: column; gap: 18px; }
+.map-frame { border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); height: 260px; }
+.map-card {
+    display: flex; gap: 14px;
+    background: var(--primary-light);
+    border-radius: var(--radius-md);
+    padding: 22px;
+}
+.map-card h4 { color: var(--dark-color); font-size: 0.98rem; margin-bottom: 6px; }
+.btn-map {
+    display: inline-flex; align-items: center; gap: 8px;
+    margin-top: 14px; padding: 10px 18px;
+    background: var(--white); color: var(--primary-dark);
+    font-weight: 700; font-size: 0.85rem;
+    border-radius: var(--radius-pill);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+.btn-map:hover { background: var(--primary-color); color: var(--white); }
+
+@media (max-width: 1100px) {
+    .contact-layout { grid-template-columns: 1fr; }
+    .map-frame { height: 320px; }
+}
+
+/* =========================================================
+   DIVISORES DE OLA (TRANSICIONES ONDULADAS ENTRE SECCIONES)
+   ========================================================= */
+.wave-divider {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 70px;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 3;
+    pointer-events: none;
+}
+.wave-divider svg { display: block; width: 100%; height: 100%; }
+
+.wave-divider-up {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -69px;
+    height: 70px;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 2;
+    pointer-events: none;
+}
+.wave-divider-up svg { display: block; width: 100%; height: 100%; }
+
+/* =========================================================
    FOOTER
    ========================================================= */
-footer { background: var(--dark-color); color: rgba(255,255,255,0.85); padding-top: 70px; }
+footer { position: relative; background: var(--dark-color); color: rgba(255,255,255,0.85); padding-top: 70px; }
 
 .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 50px; border-bottom: 1px solid rgba(255,255,255,0.1); }
 
@@ -404,6 +529,7 @@ footer { background: var(--dark-color); color: rgba(255,255,255,0.85); padding-t
 .page-header .hero-content .eyebrow { margin: 0 auto 18px; }
 .page-header .hero-content h1 { font-size: 3.1rem; margin-bottom: 14px; }
 .page-header .hero-content p { margin: 0 auto; }
+.page-header-wave { border-bottom: none; }
 
 .card-info .desc { color: var(--text-color); font-size: 0.95rem; margin-bottom: 10px; }
 
@@ -441,7 +567,7 @@ footer { background: var(--dark-color); color: rgba(255,255,255,0.85); padding-t
 }
 .input-wrapper:focus-within { border-color: var(--primary-color); box-shadow: 0 0 0 4px var(--primary-light); }
 .input-wrapper i { margin-right: 10px; color: var(--primary-color); }
-.input-wrapper input, .input-wrapper select { border: none; outline: none; width: 100%; font-family: var(--font-main); font-size: 1rem; background: transparent; color: var(--dark-color); }
+.input-wrapper input, .input-wrapper select, .input-wrapper textarea { border: none; outline: none; width: 100%; font-family: var(--font-main); font-size: 1rem; background: transparent; color: var(--dark-color); }
 
 .btn-container-center { display: flex; justify-content: center; }
 

@@ -86,88 +86,139 @@
 <div id="menu-overlay" class="menu-overlay"></div>
 
     <!-- CABECERA DE LA PÁGINA -->
-    <section class="page-header" style="background: linear-gradient(rgba(15,35,24,.78), rgba(15,35,24,.78)), url('../img/cco.jpeg') center/cover no-repeat;">
+    <section class="page-header page-header-wave" style="background: linear-gradient(rgba(15,35,24,.4), rgba(15,35,24,.5)), url('../img/Contacto.jpg') center/cover no-repeat;">
         <div class="hero-content">
-            <span class="eyebrow">Hablemos</span>
-            <h1>Contáctanos</h1>
-            <p>Estamos listos para integrar tu talento a nuestras iniciativas de impacto social.</p>
+            <span class="eyebrow">Contáctanos</span>
+            <h1>Estamos aquí para ti</h1>
+            <p>Comunícate con nosotros a través de los canales oficiales y ser parte de nuestras iniciativas de impacto social.</p>
+        </div>
+        <div class="wave-divider">
+            <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+                <path d="M0,40 C240,90 480,0 720,40 C960,80 1200,10 1440,40 L1440,100 L0,100 Z" fill="var(--white)"></path>
+                <path d="M0,40 C240,90 480,0 720,40 C960,80 1200,10 1440,40" fill="none" stroke="var(--accent-color)" stroke-width="6"></path>
+            </svg>
         </div>
     </section>
 
     <!-- SECCIÓN DE INFORMACIÓN Y CONTACTO -->
     <section class="section">
         <div class="container">
-            <span class="eyebrow">Canales Directos</span>
-            <h2 class="section-title">Información Oficial</h2>
-            <p class="section-subtitle">Comunícate a través de nuestros canales autorizados para convenios y programas.</p>
-            
-            <!-- Tarjetas de información interactiva basadas en el documento oficial -->
-            <div class="carousel-container" style="margin-bottom: 50px;">
-                
-                <!-- Tarjeta Representación Legal -->
-                <div class="card" style="padding: 30px; text-align: center; border-bottom: 4px solid var(--primary-color);">
-                    <i class="fas fa-user-tie" style="font-size: 2.5rem; color: var(--primary-color); margin-bottom: 20px;"></i>
-                    <h3 style="color: var(--dark-color);">Representación Legal</h3>
-                    <p class="desc" style="color: var(--text-color); font-weight: 600; font-size: 1.1rem;">Ernest Carrera</p>
-                    <p style="color: #777; font-size: 0.9rem;">Director CIDCI</p>
-                    <p style="color: var(--primary-color); font-weight: bold; font-size: 0.95rem; margin-top: 10px;">RUC: 0201613221001</p>
+            <div class="contact-layout">
+
+                <!-- COLUMNA IZQUIERDA: INFORMACIÓN DE CONTACTO -->
+                <div class="info-panel">
+                    <span class="eyebrow" style="margin:0 0 4px;">Información de Contacto</span>
+
+                    <div class="info-card">
+                        <div class="info-icon"><i class="fas fa-user-tie"></i></div>
+                        <div class="info-body">
+                            <h4>Representación Legal</h4>
+                            <p class="info-value">Ernest Carrera</p>
+                            <p class="info-desc">Director CIDCI</p>
+                            <p class="info-extra">RUC: 0201613221001</p>
+                        </div>
+                    </div>
+
+                    <a href="whatsapp://send?phone=593993196208&text=Hola,%20deseo%20información%20sobre%20los%20programas%20y%20convenios" class="info-card info-card-link">
+                        <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div class="info-body">
+                            <h4>Teléfono / WhatsApp</h4>
+                            <p class="info-value">0993196208</p>
+                            <p class="info-desc">Atención Directa</p>
+                        </div>
+                    </a>
+
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ernestcarrera@hotmail.com" target="_blank" class="info-card info-card-link">
+                        <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="info-body">
+                            <h4>Correo Electrónico</h4>
+                            <p class="info-value" style="word-break: break-all;">ernestcarrera@hotmail.com</p>
+                            <p class="info-desc">Consultas Formales</p>
+                        </div>
+                    </a>
+
+                    <div class="info-card">
+                        <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="info-body">
+                            <h4>Nuestra ubicación</h4>
+                            <p class="info-desc">Centro de Innovación y Desarrollo Comunitario Internacional<br>San Luis de Pambil, Ecuador</p>
+                            <a href="https://www.google.com/maps?q=QQ76%2BFF9%20San%20Luis%20de%20Pambil" target="_blank" class="info-link">Cómo llegar <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Tarjeta Teléfono / WhatsApp -->
-                <a href="whatsapp://send?phone=593993196208&text=Hola,%20deseo%20información%20sobre%20los%20programas%20y%20convenios" class="card interactive-card" style="padding: 30px; text-align: center; display: block; text-decoration: none; border-bottom: 4px solid var(--primary-color);">
-                    <i class="fas fa-phone-alt" style="font-size: 2.5rem; color: var(--primary-color); margin-bottom: 20px;"></i>
-                    <h3 style="color: var(--dark-color);">Teléfono / WhatsApp</h3>
-                    <p class="desc" style="color: var(--text-color); font-weight: 600; font-size: 1.1rem;">0993196208</p>
-                    <p style="color: #777; font-size: 0.9rem;">Atención Directa</p>
-                </a>
-                
-                <!-- Tarjeta Correo Electrónico -->
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ernestcarrera@hotmail.com" target="_blank" class="card interactive-card" style="padding: 30px; text-align: center; display: block; text-decoration: none; border-bottom: 4px solid var(--primary-color);">
-                    <i class="fas fa-envelope" style="font-size: 2.5rem; color: var(--primary-color); margin-bottom: 20px;"></i>
-                    <h3 style="color: var(--dark-color);">Correo Electrónico</h3>
-                    <p class="desc" style="color: var(--text-color); font-weight: 600; font-size: 1.1rem; word-break: break-all;">ernestcarrera@hotmail.com</p>
-                    <p style="color: #777; font-size: 0.9rem;">Consultas Formales</p>
-                </a>
-            </div>
-
-            <!-- Formulario y Mapa -->
-            <div class="contact-container">
-                <div class="contact-form">
+                <!-- COLUMNA CENTRAL: FORMULARIO -->
+                <div class="contact-form-card">
+                    <div class="form-icon"><i class="fas fa-paper-plane"></i></div>
                     <h2>Envíanos tu Solicitud</h2>
+                    <p class="form-subtitle">Completa el formulario y nos pondremos en contacto contigo a la brevedad.</p>
+
                     <!-- Formulario conectado directamente para abrir Gmail web -->
                     <form id="gmail-form">
-                        <input type="text" id="nombre" placeholder="Nombre completo" required>
-                        <input type="email" id="email" placeholder="Correo electrónico" required>
-                        <input type="tel" id="telefono" placeholder="Número de teléfono" required>
-                        <select id="destino" required>
-                            <option value="">Área de interés</option>
-                            <option value="Educación">Educación</option>
-                            <option value="Medio Ambiente">Medio Ambiente</option>
-                            <option value="Innovación">Innovación</option>
-                            <option value="Salud">Salud</option>
-                            <option value="Desarrollo Comunitario">Desarrollo Comunitario</option>
-                        </select>
-                        <textarea id="mensaje" placeholder="Cuéntanos los detalles de tu consulta o propuesta..." rows="4" required></textarea>
-                        <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar Solicitud Institucional</button>
+                        <div class="input-wrapper">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="nombre" placeholder="Nombre completo *" required>
+                        </div>
+                        <div class="input-wrapper">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="email" placeholder="Correo electrónico *" required>
+                        </div>
+                        <div class="input-wrapper">
+                            <i class="fas fa-phone"></i>
+                            <input type="tel" id="telefono" placeholder="Número de teléfono *" required>
+                        </div>
+                        <div class="input-wrapper">
+                            <i class="fas fa-tags"></i>
+                            <select id="destino" required>
+                                <option value="">Área de interés *</option>
+                                <option value="Educación">Educación</option>
+                                <option value="Medio Ambiente">Medio Ambiente</option>
+                                <option value="Innovación">Innovación</option>
+                                <option value="Salud">Salud</option>
+                                <option value="Desarrollo Comunitario">Desarrollo Comunitario</option>
+                            </select>
+                        </div>
+                        <div class="input-wrapper input-wrapper-textarea">
+                            <i class="fas fa-comment-dots"></i>
+                            <textarea id="mensaje" placeholder="Cuéntanos los detalles de tu consulta o propuesta... *" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar Solicitud Institucional <i class="fas fa-arrow-right"></i></button>
                     </form>
+                    <p class="form-note"><i class="fas fa-shield-alt"></i> Tus datos están seguros con nosotros.</p>
                 </div>
-                <div class="contact-map">
-                    <a href="https://www.google.com/maps?q=-2.18022,-79.89289" target="_blank">
+
+                <!-- COLUMNA DERECHA: MAPA -->
+                <div class="map-panel">
+                    <div class="map-frame">
                         <iframe
-                            src="https://www.google.com/maps?q=-2.18022,-79.89289&z=17&output=embed"
+                            src="https://www.google.com/maps?q=QQ76%2BFF9%20San%20Luis%20de%20Pambil&z=17&output=embed"
                             width="100%"
                             height="100%"
-                            style="border:0;border-radius:10px;"
+                            style="border:0;"
                             loading="lazy">
                         </iframe>
-                    </a>
+                    </div>
+                    <div class="map-card">
+                        <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <h4>Ubicación en el mapa</h4>
+                            <p class="info-desc">Encuentra nuestra sede fácilmente y visítanos en nuestras instalaciones.</p>
+                            <a href="https://www.google.com/maps?q=QQ76%2BFF9%20San%20Luis%20de%20Pambil" target="_blank" class="btn-map">Ver en Google Maps <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </div>
     </section>
 
     <!-- FOOTER -->
     <footer>
+        <div class="wave-divider-up">
+            <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+                <path d="M0,40 C240,90 480,0 720,40 C960,80 1200,10 1440,40 L1440,100 L0,100 Z" fill="var(--dark-color)"></path>
+            </svg>
+        </div>
         <div class="container footer-grid">
             <div class="footer-brand">
                 <img src="../img/logo-cidci.png" alt="Fundación CIDCI">
@@ -175,7 +226,7 @@
                 <div class="footer-social">
                     <a href="whatsapp://send?phone=593993196208&text=Hola,%20deseo%20más%20información" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                     <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ernestcarrera@hotmail.com" target="_blank" rel="noopener" aria-label="Correo"><i class="fas fa-envelope"></i></a>
-                    <a href="https://www.google.com/maps?q=-2.18022,-79.89289" target="_blank" rel="noopener" aria-label="Ubicación"><i class="fas fa-map-marker-alt"></i></a>
+                    <a href="https://www.google.com/maps?q=QQ76%2BFF9%20San%20Luis%20de%20Pambil" target="_blank" rel="noopener" aria-label="Ubicación"><i class="fas fa-map-marker-alt"></i></a>
                 </div>
             </div>
             <div class="footer-col">
@@ -209,7 +260,7 @@
         </div>
         <div class="container footer-bottom">
             <span>&copy; 2026 Centro de Innovación y Desarrollo Comunitario Internacional. Todos los derechos reservados.</span>
-            <span>Guayaquil, Ecuador</span>
+            <span>San Luis de Pambil, Ecuador</span>
         </div>
     </footer>
 
@@ -244,6 +295,8 @@
             
             const urlGmail = `https://mail.google.com/mail/?view=cm&fs=1&to=${tuCorreo}&su=${asunto}&body=${cuerpo}`;
             window.open(urlGmail, '_blank');
+
+            e.target.reset();
         });
     </script>
 
