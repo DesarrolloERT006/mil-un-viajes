@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO y Meta Etiquetas Actualizadas -->
+    <title>Programas y Pasantías | Centro de Innovación</title>
+    <meta name="description" content="Descubre nuestros programas integrales, pasantías y proyectos de investigación comunitaria con hospedaje, alimentación y traslados incluidos.">
+    
+    <!-- Google Fonts & Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    
+    <!-- Hojas de Estilo Conectadas -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="icon" type="image/png" href="../img/logo-cidci.png">
+
+    <!-- Estilos específicos para tarjetas de programas y etiquetas de beneficios -->
+    <style>
+        .paquete-card { display: flex; flex-wrap: wrap; background: var(--white); border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.08); margin-bottom: 40px; transition: transform 0.3s ease; }
+        .paquete-card:hover { transform: translateY(-5px); }
+        .paquete-img { flex: 1; min-width: 300px; min-height: 300px; background-size: cover; background-position: center; }
+        .paquete-content { flex: 2; padding: 40px; min-width: 300px; display: flex; flex-direction: column; justify-content: center; }
+        .beneficios-grid { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin: 25px 0; }
+        .beneficio-tag { background: rgba(5,150,105,0.15); color: var(--primary-color); padding: 8px 18px; border-radius: 25px; font-size: 0.95rem; font-weight: 600; border: 1px solid rgba(5,150,105,0.3); }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER Y TRADUCTOR -->
+    <header class="navbar">
+        <div class="navbar-left">
+            <a href="index.html" style="display:flex; align-items:center; gap:14px;">
+                <img src="../img/logo-cidci.png" alt="Fundación CIDCI" class="brand-logo">
+                <span class="navbar-title">Centro de Innovación y Desarrollo Comunitario Internacional</span>
+            </a>
+        </div>
+
+        <nav class="nav-links-desktop">
+            <a href="index.html">Inicio</a>
+            <a href="destinos.html">Actividades</a>
+            <a href="paquetes.html" class="active">Programas</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+
+        <div class="navbar-right">
+            <button onclick="restaurarIdioma()" class="btn-espanol">🇪🇸 <span class="texto-es">ES</span></button>
+            <div class="lang-switcher" id="langSwitcher">
+                <button type="button" class="lang-switcher-btn" id="langSwitcherBtn" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-globe"></i> <span class="texto-idioma">Idioma</span> <i class="fas fa-chevron-down lang-caret"></i>
+                </button>
+                <ul class="lang-menu" id="langMenu">
+                    <li><button type="button" data-lang="en">English</button></li>
+                    <li><button type="button" data-lang="fr">Français</button></li>
+                    <li><button type="button" data-lang="de">Deutsch</button></li>
+                    <li><button type="button" data-lang="it">Italiano</button></li>
+                    <li><button type="button" data-lang="pt">Português</button></li>
+                    <li><button type="button" data-lang="zh-CN">中文</button></li>
+                    <li><button type="button" data-lang="ar">العربية</button></li>
+                    <li><button type="button" data-lang="ja">日本語</button></li>
+                    <li><button type="button" data-lang="ru">Русский</button></li>
+                </ul>
+            </div>
+            <div id="google_translate_element" class="google-translate-hidden"></div>
+            <a href="contacto.html" class="btn-cta">Únete al proyecto <i class="fas fa-arrow-right"></i></a>
+            <button id="menu-btn" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- MENÚ LATERAL -->
+  <nav id="menu-lateral">
+    <div class="menu-lateral-header">
+        <img src="../img/logo-cidci.png" alt="Fundación CIDCI">
+        <span>Fundación CIDCI</span>
+        <button id="menu-cerrar" aria-label="Cerrar menú">&times;</button>
+    </div>
+    <a href="index.html"><i class="fas fa-house"></i> Inicio</a>
+    <a href="destinos.html"><i class="fas fa-seedling"></i> Actividades</a>
+    <a href="paquetes.html" class="active"><i class="fas fa-suitcase-rolling"></i> Programas</a>
+    <a href="nosotros.html"><i class="fas fa-people-group"></i> Nosotros</a>
+    <a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a>
+    <div class="menu-lateral-cta">
+        <a href="contacto.html" class="btn btn-gold" style="width:100%;">Únete al proyecto</a>
+    </div>
+</nav>
+<div id="menu-overlay" class="menu-overlay"></div>
+
+    <!-- BANNER DE LA PÁGINA -->
+    <section class="page-header" style="background: linear-gradient(rgba(15,35,24,.78),rgba(15,35,24,.78)), url('../img/carpa.jpeg') center/cover;">
+        <div class="hero-content">
+            <span class="eyebrow">Programas y Eventos</span>
+            <h1>Liderazgo y Empleabilidad</h1>
+            <p>Involúcrate en proyectos de impacto real, desarrolla tus competencias blandas y accede a oportunidades internacionales.</p>
+        </div>
+    </section>
+
+    <!-- BENEFICIOS PARA LOS ESTUDIANTES -->
+    <section class="section bg-light" style="padding-bottom: 20px;">
+        <div class="container">
+            <div style="background: var(--dark-color); color: var(--white); padding: 50px 30px; border-radius: 15px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+                <span class="eyebrow" style="justify-content: center; color: var(--primary-color);">Exclusivo Comunidad UDLA</span>
+                <h2 style="margin-bottom: 20px; color: var(--white);">Beneficios para los Estudiantes</h2>
+                
+                <div class="beneficios-grid">
+                    <span class="beneficio-tag"><i class="fas fa-check"></i> Prácticas pre profesionales</span>
+                    <span class="beneficio-tag"><i class="fas fa-check"></i> Experiencia laboral</span>
+                    <span class="beneficio-tag"><i class="fas fa-check"></i> Certificados internacionales</span>
+                    <span class="beneficio-tag"><i class="fas fa-check"></i> Formación en liderazgo</span>
+                    <span class="beneficio-tag"><i class="fas fa-check"></i> Mentoría</span>
+                    <span class="beneficio-tag"><i class="fas fa-check"></i> Networking internacional</span>
+                    <span class="beneficio-tag"><i class="fas fa-check"></i> Desarrollo del idioma inglés</span>
+                    <span class="beneficio-tag"><i class="fas fa-check"></i> Competencias interculturales</span>
+                    <span class="beneficio-tag"><i class="fas fa-check"></i> Experiencia en proyectos reales</span>
+                </div>
+
+                <div style="background: rgba(255,255,255,0.05); padding: 25px; border-radius: 10px; margin-top: 30px; text-align: left; border-left: 4px solid var(--primary-color);">
+                    <h4 style="color: var(--primary-color); margin-bottom: 10px; font-size: 1.1rem;"><i class="fas fa-gift"></i> Actividades adicionales organizadas por CIDCI sin costo:</h4>
+                    <p style="font-size: 0.95rem; color: #d1d5db;">Charlas de empleabilidad, Talleres de CV, Simulaciones de entrevistas, Employer Talks, Networking con Empresas, Career Days y Marca Universidad.</p>
+                </div>
+
+                <p style="margin-top: 25px; font-size: 0.85rem; color: #9ca3af; line-height: 1.6; text-align: left;">
+                    * Las oportunidades de prácticas pre profesionales que sean susceptibles de reconocimiento académico por parte de la UDLA estarán sujetas a la normativa institucional vigente de la Universidad y a la normativa nacional aplicable. La participación en procesos de selección no implica garantía de contratación.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROPUESTA DE LANZAMIENTO -->
+    <section class="section">
+        <div class="container">
+            <span class="eyebrow">Agenda de Integración</span>
+            <h2 class="section-title">Propuesta de Lanzamiento</h2>
+            <p class="section-subtitle" style="margin-bottom: 50px;">Como parte del convenio, CIDCI organizará sin costo para la UDLA los siguientes espacios exclusivos.</p>
+
+            <!-- Evento 1 -->
+            <div class="paquete-card">
+                <div class="paquete-img" style="background-image: url('../img/hamaca.jpeg');"></div>
+                <div class="paquete-content">
+                    <h3 style="color: var(--dark-color); margin-bottom: 10px; font-size: 1.6rem;">Career Day UDLA × CIDCI</h3>
+                    <p style="color: var(--primary-color); font-weight: 600; margin-bottom: 15px; font-size: 1.1rem;"><i class="fas fa-briefcase"></i> Empleabilidad y Networking</p>
+                    <p style="color: var(--text-color); margin-bottom: 25px; line-height: 1.7;">Un espacio de conexión organizado junto con empresas aliadas para facilitar procesos de selección directos e incrementar las oportunidades laborales de los estudiantes.</p>
+                    <a href="contacto.html" class="btn btn-primary" style="align-self: flex-start;">Inscribirse al Evento</a>
+                </div>
+            </div>
+
+            <!-- Evento 2 -->
+            <div class="paquete-card">
+                <div class="paquete-img" style="background-image: url('../img/rio.jpeg');"></div>
+                <div class="paquete-content">
+                    <h3 style="color: var(--dark-color); margin-bottom: 10px; font-size: 1.6rem;">Semana Internacional</h3>
+                    <p style="color: var(--primary-color); font-weight: 600; margin-bottom: 15px; font-size: 1.1rem;"><i class="fas fa-globe"></i> Visión Global sin Fronteras</p>
+                    <p style="color: var(--text-color); margin-bottom: 25px; line-height: 1.7;">Jornadas enriquecedoras con testimonios de jóvenes de distintos países, diseñadas para fomentar la comunicación intercultural y explorar proyectos globales.</p>
+                    <a href="contacto.html" class="btn btn-primary" style="align-self: flex-start;">Inscribirse al Evento</a>
+                </div>
+            </div>
+
+            <!-- Evento 3 -->
+            <div class="paquete-card">
+                <div class="paquete-img" style="background-image: url('../img/cocina.jpeg');"></div>
+                <div class="paquete-content">
+                    <h3 style="color: var(--dark-color); margin-bottom: 10px; font-size: 1.6rem;">Bootcamp de Empleabilidad</h3>
+                    <p style="color: var(--primary-color); font-weight: 600; margin-bottom: 15px; font-size: 1.1rem;"><i class="fas fa-laptop-code"></i> Talleres Prácticos Gratuitos</p>
+                    <p style="color: var(--text-color); margin-bottom: 25px; line-height: 1.7;">Sesiones intensivas enfocadas en el desarrollo de competencias. Incluye orientación sobre el armado de un CV de alto impacto, simulaciones de entrevistas y LinkedIn.</p>
+                    <a href="contacto.html" class="btn btn-primary" style="align-self: flex-start;">Inscribirse al Evento</a>
+                </div>
+            </div>
+
+            <!-- Evento 4 -->
+            <div class="paquete-card">
+                <div class="paquete-img" style="background-image: url('../img/paisaje.jpeg');"></div>
+                <div class="paquete-content">
+                    <h3 style="color: var(--dark-color); margin-bottom: 10px; font-size: 1.6rem;">Feria de Oportunidades Internacionales</h3>
+                    <p style="color: var(--primary-color); font-weight: 600; margin-bottom: 15px; font-size: 1.1rem;"><i class="fas fa-plane-departure"></i> Prácticas y Voluntariados</p>
+                    <p style="color: var(--text-color); margin-bottom: 25px; line-height: 1.7;">Dirigida especialmente a estudiantes interesados en aplicar a prácticas pre profesionales y voluntariados en el exterior con organizaciones y empresas aliadas.</p>
+                    <a href="contacto.html" class="btn btn-primary" style="align-self: flex-start;">Inscribirse al Evento</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <img src="../img/logo-cidci.png" alt="Fundación CIDCI">
+                <p>Centro de Innovación y Desarrollo Comunitario Internacional. Impulsamos proyectos de innovación, investigación y cooperación internacional para fortalecer a las comunidades.</p>
+                <div class="footer-social">
+                    <a href="whatsapp://send?phone=593993196208&text=Hola,%20deseo%20más%20información" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ernestcarrera@hotmail.com" target="_blank" rel="noopener" aria-label="Correo"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.google.com/maps?q=-2.18022,-79.89289" target="_blank" rel="noopener" aria-label="Ubicación"><i class="fas fa-map-marker-alt"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Enlaces</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="destinos.html">Actividades</a></li>
+                    <li><a href="paquetes.html">Programas</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Áreas de Trabajo</h4>
+                <ul>
+                    <li><a href="destinos.html">Innovación</a></li>
+                    <li><a href="destinos.html">Desarrollo Comunitario</a></li>
+                    <li><a href="destinos.html">Cooperación Internacional</a></li>
+                    <li><a href="destinos.html">Capacitación</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <ul>
+                    <li><i class="fas fa-location-dot"></i> Av. de las Américas, Guayaquil</li>
+                    <li><i class="fas fa-phone"></i> +593 993196208</li>
+                    <li><i class="fas fa-envelope"></i> ernestcarrera@hotmail.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <span>&copy; 2026 Centro de Innovación y Desarrollo Comunitario Internacional. Todos los derechos reservados.</span>
+            <span>Guayaquil, Ecuador</span>
+        </div>
+    </footer>
+
+    <!-- BOTÓN FLOTANTE WHATSAPP ACTUALIZADO -->
+    <a href="whatsapp://send?phone=593993196208&text=Hola,%20deseo%20más%20información" class="whatsapp-btn">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts JavaScript Conectados -->
+    <script src="../js/main.js"></script>
+    <script src="../js/menu.js"></script>
+
+    <!-- Script para volver al Español -->
+    <script>
+        function restaurarIdioma() {
+            let dominio = window.location.hostname;
+            document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/`;
+            document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 GMT; domain=${dominio}; path=/`;
+            window.location.reload();
+        }
+    </script>
+
+    <!-- SCRIPT DEL TRADUCTOR DE GOOGLE -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'es', 
+                includedLanguages: 'en,fr,de,it,pt,zh-CN,ar,ja,ru', 
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>

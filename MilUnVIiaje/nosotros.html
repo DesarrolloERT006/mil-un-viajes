@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO y Meta Etiquetas Actualizadas -->
+    <title>Nosotros | Centro de Innovación</title>
+    <meta name="description" content="Conoce la historia, misión y el equipo detrás del Centro de Innovación y Desarrollo Comunitario Internacional. Promovemos investigación, sostenibilidad y cooperación.">
+    
+    <!-- Google Fonts & Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    
+    <!-- Hojas de Estilo Conectadas -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="icon" type="image/png" href="../img/logo-cidci.png">
+</head>
+<body>
+
+   <!-- HEADER Y TRADUCTOR -->
+    <header class="navbar">
+        <div class="navbar-left">
+            <a href="index.html" style="display:flex; align-items:center; gap:14px;">
+                <img src="../img/logo-cidci.png" alt="Fundación CIDCI" class="brand-logo">
+                <span class="navbar-title">Centro de Innovación y Desarrollo Comunitario Internacional</span>
+            </a>
+        </div>
+
+        <nav class="nav-links-desktop">
+            <a href="index.html">Inicio</a>
+            <a href="destinos.html">Actividades</a>
+            <a href="paquetes.html">Programas</a>
+            <a href="nosotros.html" class="active">Nosotros</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+
+        <div class="navbar-right">
+            <button onclick="restaurarIdioma()" class="btn-espanol">🇪🇸 <span class="texto-es">ES</span></button>
+            <div class="lang-switcher" id="langSwitcher">
+                <button type="button" class="lang-switcher-btn" id="langSwitcherBtn" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-globe"></i> <span class="texto-idioma">Idioma</span> <i class="fas fa-chevron-down lang-caret"></i>
+                </button>
+                <ul class="lang-menu" id="langMenu">
+                    <li><button type="button" data-lang="en">English</button></li>
+                    <li><button type="button" data-lang="fr">Français</button></li>
+                    <li><button type="button" data-lang="de">Deutsch</button></li>
+                    <li><button type="button" data-lang="it">Italiano</button></li>
+                    <li><button type="button" data-lang="pt">Português</button></li>
+                    <li><button type="button" data-lang="zh-CN">中文</button></li>
+                    <li><button type="button" data-lang="ar">العربية</button></li>
+                    <li><button type="button" data-lang="ja">日本語</button></li>
+                    <li><button type="button" data-lang="ru">Русский</button></li>
+                </ul>
+            </div>
+            <div id="google_translate_element" class="google-translate-hidden"></div>
+            <a href="contacto.html" class="btn-cta">Únete al proyecto <i class="fas fa-arrow-right"></i></a>
+            <button id="menu-btn" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- MENÚ LATERAL ESTANDARIZADO -->
+    <nav id="menu-lateral">
+        <div class="menu-lateral-header">
+        <img src="../img/logo-cidci.png" alt="Fundación CIDCI">
+        <span>Fundación CIDCI</span>
+        <button id="menu-cerrar" aria-label="Cerrar menú">&times;</button>
+    </div>
+        <a href="index.html"><i class="fas fa-house"></i> Inicio</a>
+        <a href="destinos.html"><i class="fas fa-seedling"></i> Actividades</a>
+        <a href="paquetes.html"><i class="fas fa-suitcase-rolling"></i> Programas</a>
+        <a href="nosotros.html" class="active"><i class="fas fa-people-group"></i> Nosotros</a>
+        <a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a>
+        <div class="menu-lateral-cta">
+            <a href="contacto.html" class="btn btn-gold" style="width:100%;">Únete al proyecto</a>
+        </div>
+    </nav>
+    <div id="menu-overlay" class="menu-overlay"></div>
+
+    <!-- CABECERA DE LA PÁGINA -->
+    <section class="page-header" style="background: linear-gradient(rgba(15,35,24,.78), rgba(15,35,24,.78)), url('../img/balcon.jpeg') center/cover no-repeat;">
+        <div class="hero-content">
+            <span class="eyebrow">Quiénes Somos</span>
+            <h1>Sobre Nosotros</h1>
+            <p>Impulsando el desarrollo sostenible y la cooperación internacional a través de la investigación y la innovación.</p>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: NUESTRA HISTORIA Y MISIÓN -->
+    <section class="section">
+        <div class="container intro-grid">
+            <div class="intro-text">
+                <span class="eyebrow" style="margin-left: 0;">Organización y Enfoque</span>
+                <h2>Nuestra Misión</h2>
+                <p style="margin-bottom: 20px;">
+                    En el <strong>Centro de Innovación y Desarrollo Comunitario Internacional (CIDCI)</strong> nacimos con una visión clara: transformar la manera en que las comunidades aprovechan sus recursos. Como una organización que empieza con fuerza, ofrecemos una plataforma internacional que conecta talento joven con Empresas, Organizaciones Sociales y proyectos de impacto.
+                </p>
+                <p style="margin-bottom: 20px;">
+                    Creemos firmemente que el verdadero desarrollo nace desde adentro. Por ello, apoyamos iniciativas sociales e impulsamos el desarrollo comunitario enfocando nuestro impacto social en áreas clave: <strong>Educación, Medio ambiente, Innovación, Salud y Desarrollo comunitario</strong>.
+                </p>
+            </div>
+            <div class="intro-video">
+                <img src="../img/ccao 3.jpeg" alt="Cultura y Trabajo Comunitario" style="width: 100%; height: 350px; object-fit: cover; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: CONVENIO MARCO DE COOPERACIÓN CIDCI + UDLA -->
+    <section class="section bg-warm">
+        <div class="container">
+            <span class="eyebrow">Alianza Estratégica</span>
+            <h2 class="section-title" style="margin-bottom: 10px;">Convenio Marco de Cooperación UDLA</h2>
+            <p class="section-subtitle" style="margin-bottom: 50px;">Desarrollo del Talento, la Empleabilidad y la Internacionalización.</p>
+            
+            <div class="intro-grid" style="align-items: start;">
+                
+                <!-- Columna Izquierda: Propósito, Justificación y Objetivos -->
+                <div class="intro-text" style="background: var(--white); padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                    <h3 style="color: var(--primary-color); margin-bottom: 15px;"><i class="fas fa-bullseye"></i> Propósito y Justificación</h3>
+                    <p style="margin-bottom: 15px; color: var(--text-color);">El entorno laboral requiere profesionales con competencias globales, liderazgo, comunicación intercultural, trabajo en equipos multidisciplinarios y experiencia práctica[cite: 1]. Esta propuesta tiene como finalidad establecer una alianza estratégica entre la Universidad de Las Américas (UDLA) y CIDCI en Ecuador para fortalecer la formación integral de los estudiantes.</p>
+                    
+                    <h3 style="color: var(--primary-color); margin-bottom: 15px; margin-top: 35px;"><i class="fas fa-flag"></i> Objetivo General</h3>
+                    <p style="margin-bottom: 15px; color: var(--text-color);">Desarrollar un programa permanente de colaboración para facilitar oportunidades de prácticas pre profesionales, liderazgo e intercambio internacional para estudiantes de la UDLA.</p>
+
+                    <h3 style="color: var(--primary-color); margin-bottom: 15px; margin-top: 35px;"><i class="fas fa-list-check"></i> Objetivos Específicos</h3>
+                    <ul style="list-style: none; padding-left: 0; color: var(--text-color);">
+                        <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><i class="fas fa-angle-right" style="position: absolute; left: 0; top: 4px; color: var(--primary-color);"></i> Promover prácticas nacionales e internacionales.</li>
+                        <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><i class="fas fa-angle-right" style="position: absolute; left: 0; top: 4px; color: var(--primary-color);"></i> Incrementar las oportunidades laborales para estudiantes.</li>
+                        <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><i class="fas fa-angle-right" style="position: absolute; left: 0; top: 4px; color: var(--primary-color);"></i> Organizar ferias de empleo y networking[cite: 1].</li>
+                        <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><i class="fas fa-angle-right" style="position: absolute; left: 0; top: 4px; color: var(--primary-color);"></i> Desarrollar talleres gratuitos sobre liderazgo y empleabilidad.</li>
+                        <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><i class="fas fa-angle-right" style="position: absolute; left: 0; top: 4px; color: var(--primary-color);"></i> Facilitar procesos de selección para empresas aliadas de AIESEC.</li>
+                        <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><i class="fas fa-angle-right" style="position: absolute; left: 0; top: 4px; color: var(--primary-color);"></i> Impulsar experiencias internacionales y promover proyectos alineados con los ODS.</li>
+                    </ul>
+                </div>
+
+                <!-- Columna Derecha: Compromisos -->
+                <div class="intro-text" style="background: var(--dark-color); color: var(--white); padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+                    <h3 style="color: var(--primary-color); margin-bottom: 20px;"><i class="fas fa-handshake"></i> Compromisos de CIDCI</h3>
+                    <ul style="list-style: none; padding-left: 0; margin-bottom: 35px; color: #f3f4f6;">
+                        <li style="margin-bottom: 12px;"><i class="fas fa-check-circle" style="color: var(--primary-color); margin-right: 10px;"></i> Brindar seguimiento durante las pasantías[cite: 1].</li>
+                        <li style="margin-bottom: 12px;"><i class="fas fa-check-circle" style="color: var(--primary-color); margin-right: 10px;"></i> Asignar un mentor por participante[cite: 1].</li>
+                        <li style="margin-bottom: 12px;"><i class="fas fa-check-circle" style="color: var(--primary-color); margin-right: 10px;"></i> Organizar mínimo cuatro eventos de empleabilidad por año.</li>
+                        <li style="margin-bottom: 12px;"><i class="fas fa-check-circle" style="color: var(--primary-color); margin-right: 10px;"></i> Compartir oportunidades exclusivas con la comunidad UDLA.</li>
+                        <li style="margin-bottom: 12px;"><i class="fas fa-check-circle" style="color: var(--primary-color); margin-right: 10px;"></i> Emitir certificados de participación y presentar reportes semestrales.</li>
+                    </ul>
+
+                    <h3 style="color: var(--primary-color); margin-bottom: 20px;"><i class="fas fa-university"></i> Compromisos de la UDLA</h3>
+                    <ul style="list-style: none; padding-left: 0; margin-bottom: 30px; color: #f3f4f6;">
+                        <li style="margin-bottom: 12px;"><i class="fas fa-check-circle" style="color: var(--primary-color); margin-right: 10px;"></i> Difundir las oportunidades entre sus estudiantes.</li>
+                        <li style="margin-bottom: 12px;"><i class="fas fa-check-circle" style="color: var(--primary-color); margin-right: 10px;"></i> Facilitar espacios para charlas y ferias.</li>
+                        <li style="margin-bottom: 12px;"><i class="fas fa-check-circle" style="color: var(--primary-color); margin-right: 10px;"></i> Designar un punto de contacto institucional.</li>
+                        <li style="margin-bottom: 12px;"><i class="fas fa-check-circle" style="color: var(--primary-color); margin-right: 10px;"></i> Validar las prácticas conforme a su normativa interna.</li>
+                        <li style="margin-bottom: 12px;"><i class="fas fa-check-circle" style="color: var(--primary-color); margin-right: 10px;"></i> Colaborar en actividades de promoción.</li>
+                    </ul>
+                    
+                    <p style="margin-top: 25px; font-size: 0.85rem; color: #9ca3af; border-top: 1px solid #374151; padding-top: 20px; line-height: 1.6;">
+                        * El presente Convenio tendrá una duración de tres (3) años[cite: 1]. En caso de terminación anticipada se deberá emitir notificación escrita con 90 días de anticipación.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <img src="../img/logo-cidci.png" alt="Fundación CIDCI">
+                <p>Centro de Innovación y Desarrollo Comunitario Internacional. Impulsamos proyectos de innovación, investigación y cooperación internacional para fortalecer a las comunidades.</p>
+                <div class="footer-social">
+                    <a href="whatsapp://send?phone=593993196208&text=Hola,%20deseo%20más%20información" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ernestcarrera@hotmail.com" target="_blank" rel="noopener" aria-label="Correo"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.google.com/maps?q=-2.18022,-79.89289" target="_blank" rel="noopener" aria-label="Ubicación"><i class="fas fa-map-marker-alt"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Enlaces</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="destinos.html">Actividades</a></li>
+                    <li><a href="paquetes.html">Programas</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Áreas de Trabajo</h4>
+                <ul>
+                    <li><a href="destinos.html">Innovación</a></li>
+                    <li><a href="destinos.html">Desarrollo Comunitario</a></li>
+                    <li><a href="destinos.html">Cooperación Internacional</a></li>
+                    <li><a href="destinos.html">Capacitación</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <ul>
+                    <li><i class="fas fa-location-dot"></i> Av. de las Américas, Guayaquil</li>
+                    <li><i class="fas fa-phone"></i> +593 993196208</li>
+                    <li><i class="fas fa-envelope"></i> ernestcarrera@hotmail.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <span>&copy; 2026 Centro de Innovación y Desarrollo Comunitario Internacional. Todos los derechos reservados.</span>
+            <span>Guayaquil, Ecuador</span>
+        </div>
+    </footer>
+
+    <!-- BOTÓN FLOTANTE WHATSAPP -->
+    <a href="whatsapp://send?phone=593993196208&text=Hola,%20deseo%20más%20información" class="whatsapp-btn">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts JavaScript Conectados -->
+    <script src="../js/main.js"></script>
+    <script src="../js/menu.js"></script>
+
+    <!-- Script para volver al Español -->
+    <script>
+        function restaurarIdioma() {
+            let dominio = window.location.hostname;
+            document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/`;
+            document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 GMT; domain=${dominio}; path=/`;
+            window.location.reload();
+        }
+    </script>
+
+    <!-- SCRIPT DEL TRADUCTOR DE GOOGLE -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'es',
+                includedLanguages: 'en,fr,de,it,pt,zh-CN,ar,ja,ru',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>
