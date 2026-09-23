@@ -1613,10 +1613,6 @@ body { top: 0 !important; }
     .btn-cta { display: none; }
 }
 
-@media (max-width: 1500px) {
-    .navbar-title { display: none; }
-}
-
 @media (max-width: 640px) {
     .navbar-right { gap: 8px; }
     .btn-espanol { padding: 0 12px; }
@@ -1624,8 +1620,12 @@ body { top: 0 !important; }
     .lang-switcher-btn { padding: 0 12px; }
     .lang-switcher-btn .texto-idioma { display: none; }
     .lang-menu { right: -10px; min-width: 170px; }
+    .navbar-title { font-size: 0.56rem; max-width: 150px; }
+    .navbar-brand-sub { font-size: 0.85rem; }
 }
 
 @media (max-width: 400px) {
     .brand-logo { height: 42px; }
+    .navbar-title { font-size: 0.48rem; max-width: 110px; }
+    .navbar-brand-sub { font-size: 0.72rem; }
 }
