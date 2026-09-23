@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO y Meta Etiquetas -->
+    <title>Voluntariado en Ecuador | Fundación CIDCI</title>
+    <meta name="description" content="Sé voluntario en Ecuador con Fundación CIDCI. Participa en proyectos comunitarios, ambientales, culturales, educativos y de turismo solidario en San Luis de Pambil.">
+
+    <!-- Google Fonts & Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Hojas de Estilo Conectadas -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="icon" type="image/png" href="../img/logo-cidci.png">
+
+    <!-- SEO: Canonical -->
+    <link rel="canonical" href="https://www.milunviajes.com/MilUnVIiaje/voluntarios.html">
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.milunviajes.com/MilUnVIiaje/voluntarios.html">
+    <meta property="og:title" content="Voluntariado en Ecuador | Fundación CIDCI">
+    <meta property="og:description" content="Sé voluntario en Ecuador con Fundación CIDCI. Participa en proyectos comunitarios, ambientales, culturales, educativos y de turismo solidario en San Luis de Pambil.">
+    <meta property="og:image" content="https://www.milunviajes.com/img/voluntario.png">
+    <meta property="og:locale" content="es_EC">
+    <meta property="og:site_name" content="Fundación CIDCI - Mil Un Viajes">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Voluntariado en Ecuador | Fundación CIDCI">
+    <meta name="twitter:description" content="Sé voluntario en Ecuador con Fundación CIDCI. Participa en proyectos comunitarios, ambientales, culturales, educativos y de turismo solidario en San Luis de Pambil.">
+    <meta name="twitter:image" content="https://www.milunviajes.com/img/voluntario.png">
+
+    <!-- Datos estructurados (Schema.org) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "NGO",
+        "name": "Centro de Innovación y Desarrollo Comunitario Internacional (CIDCI)",
+        "alternateName": "Mil Un Viajes",
+        "url": "https://www.milunviajes.com/MilUnVIiaje/index.html",
+        "logo": "https://www.milunviajes.com/img/logo-cidci.png",
+        "description": "Fundación que conecta voluntariado, pasantías universitarias y turismo solidario con comunidades locales en San Luis de Pambil, Bolívar, Ecuador.",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "San Luis de Pambil",
+            "addressRegion": "Bolívar",
+            "addressCountry": "EC"
+        },
+        "telephone": "+593993196208",
+        "sameAs": []
+    }
+    </script>
+</head>
+<body>
+
+    <!-- HEADER / NAVEGACIÓN -->
+    <header class="navbar">
+        <div class="navbar-left">
+            <a href="index.html" style="display:flex; align-items:center; gap:8px;">
+                <img src="../img/logo-cidci.png" alt="Fundación CIDCI" class="brand-logo">
+                <span class="navbar-title">Centro de Innovación y Desarrollo Comunitario Internacional<span class="navbar-brand-sub">Mil Un Viajes</span></span>
+            </a>
+        </div>
+
+        <nav class="nav-links-desktop">
+            <a href="index.html">Inicio</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="pasantias.html">Pasantías</a>
+            <a href="voluntarios.html" class="active">Voluntarios</a>
+            <a href="turismo.html">Turismo</a>
+            <a href="mundomejor.html">Mundo Mejor</a>
+            <a href="galeria.html">Galería</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+
+        <div class="navbar-right">
+            <button onclick="restaurarIdioma()" class="btn-espanol">🇪🇸 <span class="texto-es">ES</span></button>
+            <div class="lang-switcher" id="langSwitcher">
+                <button type="button" class="lang-switcher-btn" id="langSwitcherBtn" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-globe"></i> <span class="texto-idioma">Idioma</span> <i class="fas fa-chevron-down lang-caret"></i>
+                </button>
+                <ul class="lang-menu" id="langMenu">
+                    <li><button type="button" data-lang="en">English</button></li>
+                    <li><button type="button" data-lang="fr">Français</button></li>
+                    <li><button type="button" data-lang="de">Deutsch</button></li>
+                    <li><button type="button" data-lang="it">Italiano</button></li>
+                    <li><button type="button" data-lang="pt">Português</button></li>
+                    <li><button type="button" data-lang="zh-CN">中文</button></li>
+                    <li><button type="button" data-lang="ar">العربية</button></li>
+                    <li><button type="button" data-lang="ja">日本語</button></li>
+                    <li><button type="button" data-lang="ru">Русский</button></li>
+                </ul>
+            </div>
+            <div id="google_translate_element" class="google-translate-hidden"></div>
+            <a href="whatsapp://send?phone=593993196208&text=Hola,%20deseo%20más%20información%20sobre%20voluntariado" class="btn-cta"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            <button id="menu-btn" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+    <div class="navbar-curve">
+        <svg viewBox="0 0 1440 75" preserveAspectRatio="none"><path d="M0,0 L1440,0 L1440,8 C1000,9 600,10 300,16 C180,22 60,55 0,70 Z" fill="var(--white)"></path></svg>
+    </div>
+
+    <!-- MENÚ LATERAL -->
+    <nav id="menu-lateral">
+        <div class="menu-lateral-header">
+            <img src="../img/logo-cidci.png" alt="Fundación CIDCI">
+            <span>Fundación CIDCI</span>
+            <button id="menu-cerrar" aria-label="Cerrar menú">&times;</button>
+        </div>
+        <a href="index.html"><i class="fas fa-house"></i> Inicio</a>
+        <a href="nosotros.html"><i class="fas fa-people-group"></i> Nosotros</a>
+        <a href="pasantias.html"><i class="fas fa-user-graduate"></i> Pasantías</a>
+        <a href="voluntarios.html" class="active"><i class="fas fa-hands-helping"></i> Voluntarios</a>
+        <a href="turismo.html"><i class="fas fa-mountain-sun"></i> Turismo</a>
+        <a href="mundomejor.html"><i class="fas fa-seedling"></i> Mundo Mejor</a>
+        <a href="galeria.html"><i class="fas fa-images"></i> Galería</a>
+        <a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a>
+        <div class="menu-lateral-cta">
+            <a href="whatsapp://send?phone=593993196208&text=Hola,%20deseo%20más%20información" class="btn btn-gold" style="width:100%;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        </div>
+    </nav>
+    <div id="menu-overlay" class="menu-overlay"></div>
+
+    <!-- CABECERA DE LA PÁGINA -->
+    <section class="page-header page-header-wave" style="background: linear-gradient(rgba(15,35,24,.55), rgba(15,35,24,.6)), url('../img/voluntario.png') center/cover no-repeat;">
+        <div class="hero-content">
+            <span class="eyebrow">🌎 Para Voluntarios</span>
+            <h1>Sé parte del cambio</h1>
+            <p>Vive una experiencia que transforma vidas. Comparte tu tiempo, tus conocimientos y tus talentos con comunidades reales.</p>
+        </div>
+        <div class="wave-divider">
+            <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+                <path d="M0,60 C360,88 1080,32 1440,60 L1440,100 L0,100 Z" fill="var(--white)"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- INTRODUCCIÓN AL PROGRAMA -->
+    <section class="section">
+        <div class="container community-grid">
+            <div class="community-text">
+                <span class="eyebrow">Nuestro Programa</span>
+                <h2>Comparte tu tiempo, transforma comunidades</h2>
+                <p>En Fundación Centro de Innovación y Desarrollo Comunitario Internacional (CIDCI) creemos que el voluntariado es una oportunidad para compartir conocimientos, talentos, tiempo y experiencias mientras contribuimos al desarrollo sostenible de las comunidades.</p>
+                <p>Nuestro programa de voluntariado está dirigido a personas nacionales y extranjeras que desean participar en proyectos sociales, comunitarios, culturales, ambientales y turísticos. No necesitas estar realizando una pasantía universitaria: solo tus ganas de ayudar y aportar.</p>
+                <a href="contacto.html" class="btn btn-green">Quiero ser voluntario <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="community-photo">
+                <img src="../img/imagen2.jpeg" alt="Voluntarios trabajando junto a la comunidad de San Luis de Pambil">
+                <span class="community-photo-tag"><i class="fas fa-hands-helping"></i> Tu talento también transforma</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ¿QUIÉNES PUEDEN PARTICIPAR? -->
+    <section class="section bg-light">
+        <div class="container">
+            <span class="eyebrow" style="display:table; margin:0 auto 14px;">🤝 Requisitos</span>
+            <h2 class="section-title">¿Quiénes pueden participar?</h2>
+            <p class="section-subtitle">El voluntariado en CIDCI está abierto a cualquier persona con ganas de aportar, sin importar su experiencia previa.</p>
+            <ul class="why-checklist vol-checklist-grid" style="max-width:760px; margin:0 auto;">
+                <li><i class="fas fa-check-circle"></i> Jóvenes y adultos.</li>
+                <li><i class="fas fa-check-circle"></i> Estudiantes y profesionales.</li>
+                <li><i class="fas fa-check-circle"></i> Personas de diferentes nacionalidades.</li>
+                <li><i class="fas fa-check-circle"></i> Personas que quieran adquirir nuevas experiencias.</li>
+                <li><i class="fas fa-check-circle"></i> Voluntarios con o sin experiencia previa.</li>
+                <li><i class="fas fa-check-circle"></i> Personas interesadas en apoyar proyectos comunitarios.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ¿EN QUÉ PUEDES COLABORAR? -->
+    <section class="section">
+        <div class="container">
+            <span class="eyebrow" style="display:table; margin:0 auto 14px;">🌱 Áreas de Voluntariado</span>
+            <h2 class="section-title">¿En qué puedes colaborar?</h2>
+            <p class="section-subtitle">Dependiendo del proyecto y de tus habilidades, podrás participar en:</p>
+            <div class="area-simple-grid vol-areas-grid">
+                <div class="area-simple-card">
+                    <i class="fas fa-house-chimney"></i>
+                    <span>Desarrollo comunitario</span>
+                    <p style="font-size:0.82rem; color:var(--text-color); margin-top:6px; line-height:1.5;">Apoyo a iniciativas que beneficien directamente a las comunidades.</p>
+                </div>
+                <div class="area-simple-card">
+                    <i class="fas fa-leaf"></i>
+                    <span>Medio ambiente</span>
+                    <p style="font-size:0.82rem; color:var(--text-color); margin-top:6px; line-height:1.5;">Conservación, educación ambiental y protección de los recursos naturales.</p>
+                </div>
+                <div class="area-simple-card">
+                    <i class="fas fa-palette"></i>
+                    <span>Cultura y patrimonio</span>
+                    <p style="font-size:0.82rem; color:var(--text-color); margin-top:6px; line-height:1.5;">Apoyo en actividades culturales, rescate de tradiciones y promoción del patrimonio local.</p>
+                </div>
+                <div class="area-simple-card">
+                    <i class="fas fa-chalkboard-user"></i>
+                    <span>Educación</span>
+                    <p style="font-size:0.82rem; color:var(--text-color); margin-top:6px; line-height:1.5;">Colaboración en actividades educativas, talleres y capacitación.</p>
+                </div>
+                <div class="area-simple-card">
+                    <i class="fas fa-laptop-code"></i>
+                    <span>Tecnología y comunicación</span>
+                    <p style="font-size:0.82rem; color:var(--text-color); margin-top:6px; line-height:1.5;">Informática, diseño, redes sociales, fotografía y creación de contenidos.</p>
+                </div>
+                <div class="area-simple-card">
+                    <i class="fas fa-mountain-sun"></i>
+                    <span>Turismo solidario</span>
+                    <p style="font-size:0.82rem; color:var(--text-color); margin-top:6px; line-height:1.5;">Actividades que vinculan el turismo con el desarrollo económico y social local.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ¿QUÉ RECIBIRÁS COMO VOLUNTARIO? -->
+    <section class="values-band">
+        <div class="container">
+            <span class="eyebrow" style="display:table; margin:0 auto 14px; background:rgba(255,255,255,0.5);">❤️ Beneficios</span>
+            <h2 class="section-title">¿Qué recibirás como voluntario?</h2>
+            <ul class="why-checklist vol-checklist-grid" style="max-width:820px; margin:20px auto 0;">
+                <li><i class="fas fa-check-circle"></i> Certificado de participación emitido por Fundación CIDCI.</li>
+                <li><i class="fas fa-check-circle"></i> Experiencia de voluntariado nacional o internacional.</li>
+                <li><i class="fas fa-check-circle"></i> Integración con comunidades y equipos multidisciplinarios.</li>
+                <li><i class="fas fa-check-circle"></i> Oportunidad de desarrollar nuevas habilidades.</li>
+                <li><i class="fas fa-check-circle"></i> Experiencias culturales y sociales.</li>
+                <li><i class="fas fa-check-circle"></i> Participación en proyectos con impacto comunitario.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="cta-band">
+        <div class="cta-band-bg"><img src="../img/paisaje.jpeg" alt="Paisaje de San Luis de Pambil"></div>
+        <div class="container cta-band-content">
+            <p class="script-text cta-band-script">✈️ ¿Quieres ser voluntario?</p>
+            <div class="cta-band-text">
+                <h3>Tu tiempo, tus conocimientos y tus habilidades pueden convertirse en oportunidades para otras personas. Únete a Fundación CIDCI y vive una experiencia de voluntariado con propósito.</h3>
+                <div class="cta-band-buttons">
+                    <a href="contacto.html" class="btn btn-gold">Quiero ser voluntario <i class="fas fa-arrow-right"></i></a>
+                    <a href="galeria.html" class="btn btn-secondary">Ver proyectos disponibles</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer-slim">
+        <div class="container footer-slim-inner">
+            <div class="footer-slim-left">
+                <i class="fas fa-globe"></i>
+                <span class="footer-slim-divider"></span>
+                <i class="fas fa-location-dot"></i> Nos encontramos en Ecuador
+            </div>
+            <div class="footer-slim-center">Conectando talento global con comunidades locales</div>
+            <div class="footer-slim-right">
+                <div class="footer-slim-socials">
+                    <a href="https://www.facebook.com/share/1938rxtDiR/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/tourism__1001_viajes/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+                <a href="contacto.html" class="footer-slim-cta"><i class="fas fa-envelope"></i> Contáctanos</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOTÓN FLOTANTE WHATSAPP -->
+    <a href="whatsapp://send?phone=593993196208&text=Hola,%20deseo%20más%20información%20sobre%20voluntariado" class="whatsapp-btn">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts JavaScript Conectados -->
+    <script src="../js/main.js"></script>
+    <script src="../js/menu.js"></script>
+
+    <!-- Script para volver al Español -->
+    <script>
+        function restaurarIdioma() {
+            let dominio = window.location.hostname;
+            document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/`;
+            document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 GMT; domain=${dominio}; path=/`;
+            window.location.reload();
+        }
+    </script>
+
+    <!-- SCRIPT DEL TRADUCTOR DE GOOGLE -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'es',
+                includedLanguages: 'en,fr,de,it,pt,zh-CN,ar,ja,ru',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>

@@ -2,37 +2,80 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO y Meta Etiquetas -->
-    <title>Contacto | Centro de Innovación</title>
-    <meta name="description" content="Ponte en contacto con el Centro de Innovación y Desarrollo Comunitario Internacional. Únete a nuestros proyectos de impacto social y sostenibilidad.">
+    <title>Contáctanos | Fundación CIDCI - Mil Un Viajes Ecuador</title>
+    <meta name="description" content="Ponte en contacto con Fundación CIDCI en Ecuador. Únete a nuestros programas de voluntariado, pasantías universitarias y turismo solidario con impacto social.">
     
     <!-- Google Fonts & Font Awesome -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     
     <!-- Hojas de Estilo Conectadas -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/responsive.css">
     <link rel="icon" type="image/png" href="../img/logo-cidci.png">
+
+    <!-- SEO: Canonical -->
+    <link rel="canonical" href="https://www.milunviajes.com/MilUnVIiaje/contacto.html">
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.milunviajes.com/MilUnVIiaje/contacto.html">
+    <meta property="og:title" content="Contáctanos | Fundación CIDCI - Mil Un Viajes Ecuador">
+    <meta property="og:description" content="Ponte en contacto con Fundación CIDCI en Ecuador. Únete a nuestros programas de voluntariado, pasantías universitarias y turismo solidario con impacto social.">
+    <meta property="og:image" content="https://www.milunviajes.com/img/Contacto.jpg">
+    <meta property="og:locale" content="es_EC">
+    <meta property="og:site_name" content="Fundación CIDCI - Mil Un Viajes">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contáctanos | Fundación CIDCI - Mil Un Viajes Ecuador">
+    <meta name="twitter:description" content="Ponte en contacto con Fundación CIDCI en Ecuador. Únete a nuestros programas de voluntariado, pasantías universitarias y turismo solidario con impacto social.">
+    <meta name="twitter:image" content="https://www.milunviajes.com/img/Contacto.jpg">
+
+    <!-- Datos estructurados (Schema.org) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "NGO",
+        "name": "Centro de Innovación y Desarrollo Comunitario Internacional (CIDCI)",
+        "alternateName": "Mil Un Viajes",
+        "url": "https://www.milunviajes.com/MilUnVIiaje/index.html",
+        "logo": "https://www.milunviajes.com/img/logo-cidci.png",
+        "description": "Fundación que conecta voluntariado, pasantías universitarias y turismo solidario con comunidades locales en San Luis de Pambil, Bolívar, Ecuador.",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "San Luis de Pambil",
+            "addressRegion": "Bolívar",
+            "addressCountry": "EC"
+        },
+        "telephone": "+593993196208",
+        "sameAs": []
+    }
+    </script>
 </head>
 <body>
 
     <!-- HEADER / NAVEGACIÓN -->
 <header class="navbar">
     <div class="navbar-left">
-        <a href="index.html" style="display:flex; align-items:center; gap:14px;">
+        <a href="index.html" style="display:flex; align-items:center; gap:8px;">
             <img src="../img/logo-cidci.png" alt="Fundación CIDCI" class="brand-logo">
-            <span class="navbar-title">Centro de Innovación y Desarrollo Comunitario Internacional</span>
+            <span class="navbar-title">Centro de Innovación y Desarrollo Comunitario Internacional<span class="navbar-brand-sub">Mil Un Viajes</span></span>
         </a>
     </div>
 
     <nav class="nav-links-desktop">
         <a href="index.html">Inicio</a>
-        <a href="destinos.html">Actividades</a>
-        <a href="paquetes.html">Programas</a>
         <a href="nosotros.html">Nosotros</a>
+        <a href="pasantias.html">Pasantías</a>
+        <a href="voluntarios.html">Voluntarios</a>
+        <a href="turismo.html">Turismo</a>
+        <a href="mundomejor.html">Mundo Mejor</a>
+        <a href="galeria.html">Galería</a>
         <a href="contacto.html" class="active">Contacto</a>
     </nav>
 
@@ -59,13 +102,16 @@
         </div>
         <div id="google_translate_element" class="google-translate-hidden"></div>
 
-        <a href="contacto.html" class="btn-cta">Únete al proyecto <i class="fas fa-arrow-right"></i></a>
+        <a href="whatsapp://send?phone=593993196208&text=Hola,%20deseo%20más%20información" class="btn-cta"><i class="fab fa-whatsapp"></i> WhatsApp</a>
 
         <button id="menu-btn" aria-label="Abrir menú">
             <i class="fas fa-bars"></i>
         </button>
     </div>
 </header>
+<div class="navbar-curve">
+    <svg viewBox="0 0 1440 75" preserveAspectRatio="none"><path d="M0,0 L1440,0 L1440,8 C1000,9 600,10 300,16 C180,22 60,55 0,70 Z" fill="var(--white)"></path></svg>
+</div>
 
 <!-- MENÚ LATERAL -->
 <nav id="menu-lateral">
@@ -75,12 +121,16 @@
         <button id="menu-cerrar" aria-label="Cerrar menú">&times;</button>
     </div>
     <a href="index.html"><i class="fas fa-house"></i> Inicio</a>
-    <a href="destinos.html"><i class="fas fa-seedling"></i> Actividades</a>
-    <a href="paquetes.html"><i class="fas fa-suitcase-rolling"></i> Programas</a>
     <a href="nosotros.html"><i class="fas fa-people-group"></i> Nosotros</a>
+    <a href="pasantias.html"><i class="fas fa-user-graduate"></i> Pasantías</a>
+    <a href="voluntarios.html"><i class="fas fa-hands-helping"></i> Voluntarios</a>
+    <a href="turismo.html"><i class="fas fa-mountain-sun"></i> Turismo</a>
+    <a href="mundomejor.html"><i class="fas fa-seedling"></i> Mundo Mejor</a>
+    <a href="galeria.html"><i class="fas fa-images"></i> Galería</a>
     <a href="contacto.html" class="active"><i class="fas fa-envelope"></i> Contacto</a>
+    <a href="contacto.html#ubicacion"><i class="fas fa-location-dot"></i> Ubicación</a>
     <div class="menu-lateral-cta">
-        <a href="contacto.html" class="btn btn-gold" style="width:100%;">Únete al proyecto</a>
+        <a href="whatsapp://send?phone=593993196208&text=Hola,%20deseo%20más%20información" class="btn btn-gold" style="width:100%;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
     </div>
 </nav>
 <div id="menu-overlay" class="menu-overlay"></div>
@@ -94,8 +144,7 @@
         </div>
         <div class="wave-divider">
             <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
-                <path d="M0,40 C240,90 480,0 720,40 C960,80 1200,10 1440,40 L1440,100 L0,100 Z" fill="var(--white)"></path>
-                <path d="M0,40 C240,90 480,0 720,40 C960,80 1200,10 1440,40" fill="none" stroke="var(--accent-color)" stroke-width="6"></path>
+                <path d="M0,60 C360,88 1080,32 1440,60 L1440,100 L0,100 Z" fill="var(--white)"></path>
             </svg>
         </div>
     </section>
@@ -128,7 +177,7 @@
                         </div>
                     </a>
 
-                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ernestcarrera@hotmail.com" target="_blank" class="info-card info-card-link">
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ernestcarrera@hotmail.com" target="_blank" rel="noopener noreferrer" class="info-card info-card-link">
                         <div class="info-icon"><i class="fas fa-envelope"></i></div>
                         <div class="info-body">
                             <h4>Correo Electrónico</h4>
@@ -142,9 +191,10 @@
                         <div class="info-body">
                             <h4>Nuestra ubicación</h4>
                             <p class="info-desc">Centro de Innovación y Desarrollo Comunitario Internacional<br>San Luis de Pambil, Ecuador</p>
-                            <a href="https://www.google.com/maps?q=QQ76%2BFF9%20San%20Luis%20de%20Pambil" target="_blank" class="info-link">Cómo llegar <i class="fas fa-arrow-right"></i></a>
+                            <a href="https://www.google.com/maps?q=QQ76%2BFF9%20San%20Luis%20de%20Pambil" target="_blank" rel="noopener noreferrer" class="info-link">Cómo llegar <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
+
                 </div>
 
                 <!-- COLUMNA CENTRAL: FORMULARIO -->
@@ -157,30 +207,34 @@
                     <form id="gmail-form">
                         <div class="input-wrapper">
                             <i class="fas fa-user"></i>
-                            <input type="text" id="nombre" placeholder="Nombre completo *" required>
+                            <input type="text" id="nombre" placeholder="Nombre completo *" maxlength="100" required>
                         </div>
                         <div class="input-wrapper">
                             <i class="fas fa-envelope"></i>
-                            <input type="email" id="email" placeholder="Correo electrónico *" required>
+                            <input type="email" id="email" placeholder="Correo electrónico *" maxlength="150" required>
                         </div>
                         <div class="input-wrapper">
                             <i class="fas fa-phone"></i>
-                            <input type="tel" id="telefono" placeholder="Número de teléfono *" required>
+                            <input type="tel" id="telefono" placeholder="Número de teléfono *" maxlength="20" pattern="[0-9+\s()-]*" required>
                         </div>
                         <div class="input-wrapper">
                             <i class="fas fa-tags"></i>
                             <select id="destino" required>
-                                <option value="">Área de interés *</option>
-                                <option value="Educación">Educación</option>
-                                <option value="Medio Ambiente">Medio Ambiente</option>
-                                <option value="Innovación">Innovación</option>
+                                <option value="">Área de estudio *</option>
                                 <option value="Salud">Salud</option>
-                                <option value="Desarrollo Comunitario">Desarrollo Comunitario</option>
+                                <option value="Ingeniería Civil">Ingeniería Civil</option>
+                                <option value="Arquitectura">Arquitectura</option>
+                                <option value="Ingeniería Ambiental">Ingeniería Ambiental</option>
+                                <option value="Educación">Educación</option>
+                                <option value="Psicología">Psicología</option>
+                                <option value="Administración">Administración</option>
+                                <option value="Tecnologías de la Información">Tecnologías de la Información</option>
+                                <option value="Turismo">Turismo</option>
                             </select>
                         </div>
                         <div class="input-wrapper input-wrapper-textarea">
                             <i class="fas fa-comment-dots"></i>
-                            <textarea id="mensaje" placeholder="Cuéntanos los detalles de tu consulta o propuesta... *" rows="4" required></textarea>
+                            <textarea id="mensaje" placeholder="Cuéntanos los detalles de tu consulta o propuesta... *" rows="4" maxlength="1500" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar Solicitud Institucional <i class="fas fa-arrow-right"></i></button>
                     </form>
@@ -188,7 +242,7 @@
                 </div>
 
                 <!-- COLUMNA DERECHA: MAPA -->
-                <div class="map-panel">
+                <div id="ubicacion" class="map-panel" style="scroll-margin-top: 110px;">
                     <div class="map-frame">
                         <iframe
                             src="https://www.google.com/maps?q=QQ76%2BFF9%20San%20Luis%20de%20Pambil&z=17&output=embed"
@@ -203,64 +257,45 @@
                         <div>
                             <h4>Ubicación en el mapa</h4>
                             <p class="info-desc">Encuentra nuestra sede fácilmente y visítanos en nuestras instalaciones.</p>
-                            <a href="https://www.google.com/maps?q=QQ76%2BFF9%20San%20Luis%20de%20Pambil" target="_blank" class="btn-map">Ver en Google Maps <i class="fas fa-arrow-right"></i></a>
+                            <a href="https://www.google.com/maps?q=QQ76%2BFF9%20San%20Luis%20de%20Pambil" target="_blank" rel="noopener noreferrer" class="btn-map">Ver en Google Maps <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
 
             </div>
+
+            <!-- TODO: reemplaza el "#" por tu enlace real de reseñas cuando tengas tu perfil de Google Business
+                 (se ve así: https://g.page/r/XXXXXXXXXXXX/review o https://search.google.com/local/writereview?placeid=XXXX) -->
+            <a href="#" target="_blank" rel="noopener noreferrer" class="review-banner">
+                <div class="review-banner-icon"><i class="fab fa-google"></i></div>
+                <div class="review-banner-body">
+                    <h3>¿Ya viviste una experiencia con CIDCI?</h3>
+                    <p>Cuéntale a otros y déjanos tu reseña en Google</p>
+                    <div class="review-banner-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <span class="review-banner-cta">Escribir una reseña <i class="fas fa-arrow-right"></i></span>
+            </a>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer>
-        <div class="wave-divider-up">
-            <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
-                <path d="M0,40 C240,90 480,0 720,40 C960,80 1200,10 1440,40 L1440,100 L0,100 Z" fill="var(--dark-color)"></path>
-            </svg>
-        </div>
-        <div class="container footer-grid">
-            <div class="footer-brand">
-                <img src="../img/logo-cidci.png" alt="Fundación CIDCI">
-                <p>Centro de Innovación y Desarrollo Comunitario Internacional. Impulsamos proyectos de innovación, investigación y cooperación internacional para fortalecer a las comunidades.</p>
-                <div class="footer-social">
-                    <a href="whatsapp://send?phone=593993196208&text=Hola,%20deseo%20más%20información" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ernestcarrera@hotmail.com" target="_blank" rel="noopener" aria-label="Correo"><i class="fas fa-envelope"></i></a>
-                    <a href="https://www.google.com/maps?q=QQ76%2BFF9%20San%20Luis%20de%20Pambil" target="_blank" rel="noopener" aria-label="Ubicación"><i class="fas fa-map-marker-alt"></i></a>
+    <footer class="footer-slim">
+        <div class="container footer-slim-inner">
+            <div class="footer-slim-left">
+                <i class="fas fa-globe"></i>
+                <span class="footer-slim-divider"></span>
+                <i class="fas fa-location-dot"></i> Nos encontramos en Ecuador
+            </div>
+            <div class="footer-slim-center">Conectando talento global con comunidades locales</div>
+            <div class="footer-slim-right">
+                <div class="footer-slim-socials">
+                    <a href="https://www.facebook.com/share/1938rxtDiR/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/tourism__1001_viajes/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 </div>
+                <a href="contacto.html" class="footer-slim-cta"><i class="fas fa-envelope"></i> Contáctanos</a>
             </div>
-            <div class="footer-col">
-                <h4>Enlaces</h4>
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="destinos.html">Actividades</a></li>
-                    <li><a href="paquetes.html">Programas</a></li>
-                    <li><a href="nosotros.html">Nosotros</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Áreas de Trabajo</h4>
-                <ul>
-                    <li><a href="destinos.html">Educación</a></li>
-                    <li><a href="destinos.html">Medio ambiente</a></li>
-                    <li><a href="destinos.html">Innovación</a></li>
-                    <li><a href="destinos.html">Salud</a></li>
-                    <li><a href="destinos.html">Desarrollo comunitario</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Contacto</h4>
-                <ul>
-                    <li><i class="fas fa-user-tie"></i> Ernest Carrera</li>
-                    <li><i class="fas fa-phone"></i> 0993196208</li>
-                    <li><i class="fas fa-envelope"></i> ernestcarrera@hotmail.com</li>
-                </ul>
-            </div>
-        </div>
-        <div class="container footer-bottom">
-            <span>&copy; 2026 Centro de Innovación y Desarrollo Comunitario Internacional. Todos los derechos reservados.</span>
-            <span>San Luis de Pambil, Ecuador</span>
         </div>
     </footer>
 
@@ -294,7 +329,7 @@
             );
             
             const urlGmail = `https://mail.google.com/mail/?view=cm&fs=1&to=${tuCorreo}&su=${asunto}&body=${cuerpo}`;
-            window.open(urlGmail, '_blank');
+            window.open(urlGmail, '_blank', 'noopener,noreferrer');
 
             e.target.reset();
         });
