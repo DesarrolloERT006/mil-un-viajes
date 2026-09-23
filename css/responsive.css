@@ -39,6 +39,7 @@
 
     .hero-search-bar { padding: 18px; }
     .mission-strip-grid { grid-template-columns: 1fr; gap: 40px; }
+    .mission-banner-img { grid-column: 1; }
     .carreras-title { font-size: 1.9rem; }
     .carreras-collage { grid-template-rows: repeat(2, 160px); margin-bottom: 20px; }
     .mission-benefits .why-checklist li { font-size: 0.94rem; }
