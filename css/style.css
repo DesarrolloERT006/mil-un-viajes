@@ -1381,7 +1381,7 @@ a.info-card-link { text-decoration: none; }
 .navbar-left { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
 
 .brand-logo {
-    height: 92px; /* Ajusta este valor si lo quieres más grande o pequeño */
+    height: 108px; /* Ajusta este valor si lo quieres más grande o pequeño */
     width: auto;
     object-fit: contain;
     display: block;
@@ -1625,7 +1625,7 @@ body { top: 0 !important; }
 }
 
 @media (max-width: 400px) {
-    .brand-logo { height: 42px; }
+    .brand-logo { height: 92px; }
     .navbar-title { font-size: 0.48rem; max-width: 110px; }
     .navbar-brand-sub { font-size: 0.72rem; }
 }
