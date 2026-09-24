@@ -1382,8 +1382,8 @@ a.info-card-link { text-decoration: none; }
     z-index: -1;
     clip-path: polygon(
         0% 0%, 100% 0%,
-        100% 10px, 85% 14px, 70% 22px, 55% 34px,
-        40% 50px, 25% 68px, 12% 82px, 5% 92px, 0% 96px
+        100% 5px, 85% 8px, 70% 14px, 55% 22px,
+        40% 35px, 25% 48px, 12% 58px, 5% 66px, 0% 70px
     );
 }
 
