@@ -163,7 +163,7 @@ select:focus-visible, textarea:focus-visible {
     position: relative;
     height: 395px;
     min-height: 395px;
-    margin-top: 92px;
+    margin-top: 76px;
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -757,7 +757,7 @@ select:focus-visible, textarea:focus-visible {
 /* =========================================================
    HERO DIVIDIDO (PÁGINA "NOSOTROS")
    ========================================================= */
-.about-hero { display: grid; grid-template-columns: 42% 58%; height: 460px; margin-top: 92px; }
+.about-hero { display: grid; grid-template-columns: 42% 58%; height: 460px; margin-top: 76px; }
 .about-hero-text { display: flex; flex-direction: column; justify-content: center; padding: 50px 6vw; background: var(--cream); }
 .about-hero-text .icon-leaf { font-size: 2.3rem; color: var(--primary-color); margin-bottom: 20px; }
 .about-hero-text h1 { font-size: 2.8rem; color: var(--dark-color); margin-bottom: 14px; font-weight: 700; }
@@ -1277,7 +1277,7 @@ a.info-card-link { text-decoration: none; }
 .page-header {
     position: relative;
     min-height: 44vh;
-    margin-top: 92px;
+    margin-top: 76px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1367,10 +1367,9 @@ a.info-card-link { text-decoration: none; }
     z-index: 1000;
 }
 
-/* Onda suave y sutil debajo de la barra (la barra en sí queda sólida, sin recortes). */
 .navbar-curve {
     position: fixed;
-    top: 92px;
+    top: 76px;
     left: 0;
     width: 100%;
     height: 75px;
@@ -1382,7 +1381,7 @@ a.info-card-link { text-decoration: none; }
 .navbar-left { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
 
 .brand-logo {
-    height: 108px; /* Ajusta este valor si lo quieres más grande o pequeño */
+    height: 92px; /* Ajusta este valor si lo quieres más grande o pequeño */
     width: auto;
     object-fit: contain;
     display: block;
@@ -1403,7 +1402,6 @@ a.info-card-link { text-decoration: none; }
     line-height: 1.25;
     max-width: 240px;
     white-space: normal;
-    text-shadow: 0 0 6px var(--white), 0 0 10px var(--white);
 }
 .navbar-brand-sub {
     display: block;
@@ -1416,7 +1414,6 @@ a.info-card-link { text-decoration: none; }
     line-height: 1;
     margin-left: 0;
     margin-top: 4px;
-    text-shadow: 0 0 6px var(--white), 0 0 10px var(--white);
 }
 
 .nav-links-desktop { display: flex; align-items: center; gap: 14px; flex-wrap: nowrap; justify-content: flex-end; min-width: 0; }
@@ -1628,7 +1625,7 @@ body { top: 0 !important; }
 }
 
 @media (max-width: 400px) {
-    .brand-logo { height: 92px; }
+    .brand-logo { height: 42px; }
     .navbar-title { font-size: 0.48rem; max-width: 110px; }
     .navbar-brand-sub { font-size: 0.72rem; }
 }
