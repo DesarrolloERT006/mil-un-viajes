@@ -163,7 +163,7 @@ select:focus-visible, textarea:focus-visible {
     position: relative;
     height: 395px;
     min-height: 395px;
-    margin-top: 124px;
+    margin-top: 92px;
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -757,7 +757,7 @@ select:focus-visible, textarea:focus-visible {
 /* =========================================================
    HERO DIVIDIDO (PÁGINA "NOSOTROS")
    ========================================================= */
-.about-hero { display: grid; grid-template-columns: 42% 58%; height: 460px; margin-top: 124px; }
+.about-hero { display: grid; grid-template-columns: 42% 58%; height: 460px; margin-top: 92px; }
 .about-hero-text { display: flex; flex-direction: column; justify-content: center; padding: 50px 6vw; background: var(--cream); }
 .about-hero-text .icon-leaf { font-size: 2.3rem; color: var(--primary-color); margin-bottom: 20px; }
 .about-hero-text h1 { font-size: 2.8rem; color: var(--dark-color); margin-bottom: 14px; font-weight: 700; }
@@ -1208,7 +1208,7 @@ a.info-card-link { text-decoration: none; }
     left: 0;
     right: 0;
     bottom: -1px;
-    height: 90px;
+    height: 46px;
     overflow: hidden;
     line-height: 0;
     z-index: 3;
@@ -1277,7 +1277,7 @@ a.info-card-link { text-decoration: none; }
 .page-header {
     position: relative;
     min-height: 44vh;
-    margin-top: 124px;
+    margin-top: 92px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1370,10 +1370,10 @@ a.info-card-link { text-decoration: none; }
 /* Onda suave y sutil debajo de la barra (la barra en sí queda sólida, sin recortes). */
 .navbar-curve {
     position: fixed;
-    top: 124px;
+    top: 92px;
     left: 0;
     width: 100%;
-    height: 30px;
+    height: 75px;
     z-index: 999;
     pointer-events: none;
 }
