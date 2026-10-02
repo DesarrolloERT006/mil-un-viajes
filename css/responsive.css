@@ -35,6 +35,13 @@
     .areas-layout-simple { grid-template-columns: 1fr; gap: 30px; }
     .area-simple-grid { grid-template-columns: repeat(3, 1fr); }
     .vol-areas-grid { grid-template-columns: repeat(2, 1fr); }
+    .volunteer-page .section { padding: 52px 0; }
+    .volunteer-experience-grid { grid-template-columns: 1fr; }
+    .tourism-page .section { padding: 52px 0; }
+    .tourism-experience-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .tourism-experience-grid li:last-child { grid-column: 1 / -1; }
+    .tourism-mantras { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .tourism-mantras p:last-child { grid-column: 1 / -1; }
     .gallery-mosaic-grid { grid-template-columns: repeat(2, 1fr); }
 
     .hero-search-bar { padding: 18px; }
@@ -132,6 +139,16 @@
     .area-simple-grid { grid-template-columns: repeat(2, 1fr); }
     .vol-areas-grid { grid-template-columns: 1fr; }
     .vol-checklist-grid { grid-template-columns: 1fr; }
+    .volunteer-experience-grid { grid-template-columns: 1fr; }
+    .volunteer-slogans { grid-template-columns: 1fr; }
+    .volunteer-page .about-hero-text h1 { font-size: 2rem; }
+    .volunteer-page .section { padding: 38px 0; }
+    .tourism-page .about-hero-text h1 { font-size: 2rem; }
+    .tourism-page .section { padding: 38px 0; }
+    .tourism-experience-grid,
+    .tourism-mantras { grid-template-columns: 1fr; }
+    .tourism-experience-grid li:last-child,
+    .tourism-mantras p:last-child { grid-column: auto; }
     .gallery-mosaic-featured { grid-template-columns: 1fr; }
     .gallery-mosaic-grid { grid-template-columns: 1fr; }
     .gallery-filters { gap: 8px; }
@@ -145,3 +162,4 @@
     .viaje-visual-script { font-size: 1.5rem; }
     .hero-badges { justify-content: center; }
 }
+
