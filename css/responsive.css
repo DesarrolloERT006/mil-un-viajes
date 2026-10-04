@@ -52,7 +52,7 @@
     .mission-benefits .why-checklist li { font-size: 0.94rem; }
     .mission-benefits .eyebrow { font-size: 0.78rem; padding: 7px 18px; }
     .mission-benefits .btn { padding: 14px 32px; font-size: 0.98rem; }
-    .viaje-visual { height: auto; min-height: 380px; }
+    .viaje-visual { height: auto; min-height: 0; }
     .viaje-visual-script { font-size: 1.9rem; }
     .viaje-visual-content { padding: 34px; }
     .viaje-feature i { font-size: 1.3rem; }

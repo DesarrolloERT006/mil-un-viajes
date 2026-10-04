@@ -110,15 +110,12 @@
         }
 
 
-        /* =========================================
-           LETRAS LEGIBLES: SOMBRA PARA EL TEXTO
-           ========================================= */
         .hero-content .eyebrow,
         .hero-content h1,
         .hero-content p,
         .hero-tagline {
             /* Crea una sombra oscura detrás de las letras para separarlas del fondo claro */
-            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8), 0px 0px 15px rgba(0, 0, 0, 0.6) !important;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.9), 0 3px 18px rgba(0, 0, 0, 0.72) !important;
         }
 
         /* =========================================
@@ -144,12 +141,16 @@
             left: 0;
             width: 100%;
             height: 100%;
-            /* Degradado: de negro transparente a la izquierda, a invisible al centro */
-            background: linear-gradient(to right, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 60%);
-            z-index: 1; /* IMPORTANTE: Se queda detrás de la onda blanca (z-index: 2) */
-            pointer-events: none; /* Para que no estorbe al dar clics */
+            background: linear-gradient(
+                to right,
+                rgba(5, 28, 45, 0.74) 0%,
+                rgba(5, 28, 45, 0.52) 32%,
+                rgba(5, 28, 45, 0.2) 62%,
+                rgba(5, 28, 45, 0) 78%
+            );
+            z-index: 1;
+            pointer-events: none;
         }
-        /* Opcional: darle un fondo muy suave y transparente solo al contenedor del texto izquierdo por si la sombra no es suficiente */
     </style>
 </head>
 <body>
