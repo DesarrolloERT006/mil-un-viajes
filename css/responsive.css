@@ -69,6 +69,20 @@
     .internship-area-grid--other,
     .internship-mantras { grid-template-columns: 1fr; }
     .internship-benefits .section-title { font-size: 1.9rem; }
+    .internship-benefits-heading { grid-template-columns: 1fr; gap: 20px; }
+    .internship-benefits-heading .section-title { text-align: center; }
+    .internship-benefits-heading img { height: 210px; }
+    .internship-profile-intro { grid-template-columns: 1fr; gap: 22px; margin-bottom: 38px; }
+    .internship-profile-copy .section-title,
+    .internship-profile .section-subtitle { text-align: center; }
+    .internship-profile-photo { width: min(100%, 220px); margin: 0 auto; }
+    .internship-professions-heading .section-title { font-size: 1.7rem; }
+    .internship-transformation-main { grid-template-columns: 1fr; gap: 20px; }
+    .internship-transformation-copy .section-title,
+    .internship-transformation-copy > p { text-align: center; margin-left: auto; margin-right: auto; }
+    .internship-transformation-main > img { width: min(100%, 420px); margin: 0 auto; }
+    .internship-mantras p + p { border-left: 0; border-top: 1px solid var(--internship-blue-border); }
+    .internship-mantras p { justify-content: flex-start; padding: 10px 4px; }
     .internship-traits { margin-bottom: 38px; }
     .internship-cta .cta-band-text h3 { font-size: 1.45rem; }
 }
@@ -162,4 +176,3 @@
     .viaje-visual-script { font-size: 1.5rem; }
     .hero-badges { justify-content: center; }
 }
-
