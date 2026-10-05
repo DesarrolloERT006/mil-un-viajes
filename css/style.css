@@ -908,7 +908,7 @@ select:focus-visible, textarea:focus-visible {
 .mvo-card-photo { position: relative; border-radius: var(--radius-lg); overflow: hidden; min-height: 220px; box-shadow: var(--shadow-sm); }
 .mvo-card-photo img { width: 100%; height: 100%; object-fit: cover; display: block; position: absolute; inset: 0; }
 .mvo-card-photo .community-photo-tag { position: absolute; left: 14px; bottom: 14px; right: 14px; font-size: 0.78rem; }
-.mvo-card-photo--full { min-height: 0; align-self: center; }
+.mvo-card-photo--full { grid-column: 2 / -1; width: 100%; min-height: 0; }
 .mvo-card-photo--full img { position: static; height: auto; object-fit: contain; }
 
 /* =========================================================
