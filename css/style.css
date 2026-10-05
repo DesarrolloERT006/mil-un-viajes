@@ -359,7 +359,7 @@ select:focus-visible, textarea:focus-visible {
 .hero-tagline {
     position: absolute;
     z-index: 2;
-    right: 12vw;
+    right: 4vw;
     top: 50%;
     max-width: 230px;
     font-family: var(--font-script);
@@ -826,9 +826,11 @@ select:focus-visible, textarea:focus-visible {
 .internship-page .section-title,
 .internship-page .internship-area-group h3 { color: var(--internship-blue-ink); }
 .internship-benefits .section-title { color: var(--internship-blue-ink); }
+.internship-intro-layout { display: grid; grid-template-columns: minmax(0, 1fr) 240px; align-items: center; gap: 38px; }
 .internship-intro-copy { max-width: 920px; }
 .internship-intro-copy p { font-size: 1.02rem; line-height: 1.85; color: #3e5263; }
 .internship-intro-copy p + p { margin-top: 16px; }
+.internship-intro-image { display: block; width: 100%; max-width: 240px; height: auto; object-fit: contain; }
 .internship-benefits-heading { display: grid; grid-template-columns: 1fr 0.9fr; align-items: center; gap: 36px; max-width: 1020px; margin: 0 auto; }
 .internship-benefits-heading .section-title { margin: 0; text-align: left; }
 .internship-benefits-heading img { display: block; width: 100%; height: 190px; object-fit: cover; object-position: center 42%; border-radius: var(--radius-md); box-shadow: var(--shadow-md); }
@@ -905,6 +907,8 @@ select:focus-visible, textarea:focus-visible {
 .mvo-card-photo { position: relative; border-radius: var(--radius-lg); overflow: hidden; min-height: 220px; box-shadow: var(--shadow-sm); }
 .mvo-card-photo img { width: 100%; height: 100%; object-fit: cover; display: block; position: absolute; inset: 0; }
 .mvo-card-photo .community-photo-tag { position: absolute; left: 14px; bottom: 14px; right: 14px; font-size: 0.78rem; }
+.mvo-card-photo--full { min-height: 0; align-self: center; }
+.mvo-card-photo--full img { position: static; height: auto; object-fit: contain; }
 
 /* =========================================================
    SECCIÓN "NUESTRA COMUNIDAD"
@@ -1045,13 +1049,19 @@ select:focus-visible, textarea:focus-visible {
 .volunteer-experience-grid li { display: flex; align-items: flex-start; gap: 10px; min-width: 0; padding: 15px; background: var(--volunteer-blue-card); border: 1px solid var(--volunteer-border); border-radius: var(--radius-sm); box-shadow: var(--shadow-sm); color: var(--text-color); }
 .volunteer-experience-grid li span { flex: 0 0 1.5rem; font-size: 1.2rem; line-height: 1.4; }
 .volunteer-stay { background: var(--white); }
+.volunteer-stay-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(300px, 0.85fr); align-items: center; gap: 40px; }
 .volunteer-stay-content,
 .volunteer-impact-content,
 .volunteer-tourists-content { max-width: 920px; text-align: center; }
+.volunteer-stay-content { max-width: none; }
 .volunteer-stay-content p { margin: 0 auto 12px; line-height: 1.7; }
+.volunteer-stay-image { display: block; width: 100%; height: 280px; object-fit: cover; object-position: center; border-radius: var(--radius-md); box-shadow: var(--shadow-md); }
 .volunteer-stay-content p strong,
 .volunteer-slogans { color: var(--volunteer-green); }
 .volunteer-impact { background: var(--volunteer-mint); }
+.volunteer-impact-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(360px, 0.9fr); align-items: center; gap: 40px; }
+.volunteer-impact-content { max-width: none; }
+.volunteer-impact-image { display: block; width: 100%; height: 320px; object-fit: cover; object-position: center; border-radius: var(--radius-md); box-shadow: var(--shadow-md); }
 .volunteer-impact-content > p { max-width: 790px; margin: 0 auto; line-height: 1.7; }
 .volunteer-slogans { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--volunteer-border); }
 .volunteer-slogans p { font-size: 1.08rem; }
@@ -1075,8 +1085,13 @@ select:focus-visible, textarea:focus-visible {
 .tourism-page .section-title { color: var(--tourism-ink); }
 .tourism-intro { background: var(--white); }
 .tourism-intro-copy,
-.tourism-change-content,
 .tourism-closing-content { max-width: 920px; text-align: center; }
+.tourism-closing-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(360px, 0.9fr); align-items: center; gap: 40px; }
+.tourism-closing-content { max-width: none; }
+.tourism-closing-image { display: block; width: 100%; height: 320px; object-fit: cover; object-position: center; border-radius: var(--radius-md); box-shadow: var(--shadow-md); }
+.tourism-change-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(360px, 0.9fr); align-items: center; gap: 40px; }
+.tourism-change-content { text-align: center; }
+.tourism-change-image { display: block; width: 100%; height: 300px; object-fit: cover; object-position: center; border-radius: var(--radius-md); box-shadow: var(--shadow-md); }
 .tourism-intro-copy p { color: var(--text-color); font-size: 1.02rem; line-height: 1.75; }
 .tourism-intro-copy p + p { margin-top: 14px; }
 .tourism-highlights { background: var(--tourism-blue); }
@@ -1121,10 +1136,21 @@ select:focus-visible, textarea:focus-visible {
 }
 .cta-band-bg { position: absolute; inset: 0; z-index: 0; }
 .cta-band-bg img { width: 100%; height: 100%; object-fit: cover; opacity: 0.55; }
+.cta-band-bg video { width: 100%; height: 100%; object-fit: cover; opacity: 0.55; }
+.cta-band--video .cta-band-bg video { display: block; opacity: 1; filter: brightness(0.86) saturate(1.08); }
+.cta-band--video .cta-band-bg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(8, 35, 58, 0.42), rgba(8, 35, 58, 0.16) 62%, rgba(8, 35, 58, 0.08));
+    pointer-events: none;
+}
 .cta-band-content { position: relative; z-index: 1; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 30px; }
 .cta-band-script { font-size: 1.9rem; color: var(--white); max-width: 380px; }
 .cta-band-text h3 { color: var(--white); font-size: 1.3rem; margin-bottom: 18px; font-weight: 600; }
 .cta-band-buttons { display: flex; gap: 14px; flex-wrap: wrap; }
+.cta-band--video .cta-band-script,
+.cta-band--video .cta-band-text h3 { text-shadow: 0 2px 8px rgba(0, 0, 0, 0.65); }
 
 /* =========================================================
    SECCIÓN DE PROGRAMAS (FONDO OSCURO, DIVIDIDA)

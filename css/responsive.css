@@ -64,6 +64,16 @@
 }
 
 @media (max-width: 768px) {
+    .internship-intro-layout { grid-template-columns: 1fr; gap: 18px; }
+    .internship-intro-image { width: min(100%, 190px); margin: 0 auto; }
+    .volunteer-stay-layout { grid-template-columns: 1fr; gap: 24px; }
+    .volunteer-stay-image { width: min(100%, 520px); height: auto; margin: 0 auto; }
+    .volunteer-impact-layout { grid-template-columns: 1fr; gap: 24px; }
+    .volunteer-impact-image { width: min(100%, 520px); height: auto; margin: 0 auto; }
+    .tourism-change-layout { grid-template-columns: 1fr; gap: 24px; }
+    .tourism-change-image { width: min(100%, 520px); height: auto; margin: 0 auto; }
+    .tourism-closing-layout { grid-template-columns: 1fr; gap: 24px; }
+    .tourism-closing-image { width: min(100%, 520px); height: auto; margin: 0 auto; }
     .internship-benefits-grid,
     .internship-area-grid--environment,
     .internship-area-grid--other,
