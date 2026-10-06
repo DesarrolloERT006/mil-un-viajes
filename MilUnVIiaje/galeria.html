@@ -176,6 +176,17 @@
         </div>
     </section>
 
+    <dialog class="gallery-lightbox" aria-label="Vista ampliada de la galería">
+        <button class="gallery-lightbox-close" type="button" aria-label="Cerrar imagen">&times;</button>
+        <div class="gallery-lightbox-view">
+            <button class="gallery-lightbox-nav gallery-lightbox-previous" type="button" aria-label="Imagen anterior">&#10094;</button>
+            <img class="gallery-lightbox-image" alt="">
+            <button class="gallery-lightbox-nav gallery-lightbox-next" type="button" aria-label="Imagen siguiente">&#10095;</button>
+        </div>
+        <p class="gallery-lightbox-caption"></p>
+        <p class="gallery-lightbox-counter" aria-live="polite"></p>
+    </dialog>
+
     <!-- MENSAJE DE CIERRE -->
     <section class="section bg-light" style="padding-top: 30px;">
         <div class="container gallery-closing">
@@ -210,6 +221,80 @@
 
     <!-- FILTROS DE GALERÍA -->
     <script>
+        const galleryLightbox = document.querySelector('.gallery-lightbox');
+        const lightboxImage = galleryLightbox.querySelector('.gallery-lightbox-image');
+        const lightboxCaption = galleryLightbox.querySelector('.gallery-lightbox-caption');
+        const lightboxCounter = galleryLightbox.querySelector('.gallery-lightbox-counter');
+        let currentGalleryImage = null;
+
+        function visibleGalleryPhotos() {
+            return Array.from(document.querySelectorAll('.gallery-photo'))
+                .filter(function (img) { return img.style.display !== 'none'; });
+        }
+
+        function showGalleryImage(img) {
+            const photos = visibleGalleryPhotos();
+            currentGalleryImage = img;
+            lightboxImage.src = img.currentSrc || img.src;
+            lightboxImage.alt = img.alt;
+            lightboxCaption.textContent = img.alt;
+            lightboxCounter.textContent = (photos.indexOf(img) + 1) + ' de ' + photos.length;
+            galleryLightbox.querySelector('.gallery-lightbox-previous').disabled = photos.length < 2;
+            galleryLightbox.querySelector('.gallery-lightbox-next').disabled = photos.length < 2;
+        }
+
+        function openGalleryImage(img) {
+            showGalleryImage(img);
+            if (!galleryLightbox.open) galleryLightbox.showModal();
+        }
+
+        function moveGalleryImage(direction) {
+            const photos = visibleGalleryPhotos();
+            if (photos.length < 2) return;
+
+            const currentIndex = photos.indexOf(currentGalleryImage);
+            const nextIndex = (currentIndex + direction + photos.length) % photos.length;
+            showGalleryImage(photos[nextIndex]);
+        }
+
+        document.querySelectorAll('.gallery-photo').forEach(function (img) {
+            img.tabIndex = 0;
+            img.setAttribute('role', 'button');
+            img.setAttribute('aria-label', 'Ampliar imagen: ' + img.alt);
+
+            img.addEventListener('click', function () {
+                openGalleryImage(img);
+            });
+
+            img.addEventListener('keydown', function (e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    openGalleryImage(img);
+                }
+            });
+        });
+
+        galleryLightbox.querySelector('.gallery-lightbox-close').addEventListener('click', function () {
+            galleryLightbox.close();
+        });
+
+        galleryLightbox.querySelector('.gallery-lightbox-previous').addEventListener('click', function () {
+            moveGalleryImage(-1);
+        });
+
+        galleryLightbox.querySelector('.gallery-lightbox-next').addEventListener('click', function () {
+            moveGalleryImage(1);
+        });
+
+        galleryLightbox.addEventListener('keydown', function (e) {
+            if (e.key === 'ArrowLeft') moveGalleryImage(-1);
+            if (e.key === 'ArrowRight') moveGalleryImage(1);
+        });
+
+        galleryLightbox.addEventListener('click', function (e) {
+            if (e.target === galleryLightbox) galleryLightbox.close();
+        });
+
         document.getElementById('galleryFilters').addEventListener('click', function (e) {
             const btn = e.target.closest('.filter-pill');
             if (!btn) return;
