@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.milunviajes.com/sitemap.xml
+Sitemap: https://fundacionsolidariacidci.com/sitemap.xml
